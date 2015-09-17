@@ -1,6 +1,20 @@
 # qoo [![Circle CI](https://circleci.com/gh/hden/qoo.svg?style=svg)](https://circleci.com/gh/hden/qoo)
 Expressive middleware for queue workers
 
+## Task
+
+A task is exposed to the middleware chain as `this`. A task **must** implement
+the following interface.
+
+- value
+- resolve `function (result) { /* ... */ }`
+- reject `function (error) { /* ... */ }`
+
+Optional methods can be attached to a task e.g.
+
+- progress ([firebase-queue](https://github.com/firebase/firebase-queue))
+- touch ([nsq.js](https://github.com/segmentio/nsq.js))
+
 ## Example
 
 ### firebase-queue

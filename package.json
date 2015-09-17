@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "babel src/index.js -o lib/index.js",
-    "pretest": "npm run build & standard",
+    "pretest": "npm run build && standard",
     "test": "mocha"
   },
   "repository": {

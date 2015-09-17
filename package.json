@@ -1,0 +1,48 @@
+{
+  "name": "qoo",
+  "version": "0.0.0",
+  "description": "Expressive middleware for queue workers",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=0.11.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "babel src/index.js -o lib/index.js",
+    "pretest": "npm run build & standard",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hden/qoo.git"
+  },
+  "keywords": [
+    "queue",
+    "worker"
+  ],
+  "author": "Hao-kang Den <haokang.den@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hden/qoo/issues"
+  },
+  "homepage": "https://github.com/hden/qoo",
+  "dependencies": {
+    "co": "^4.6.0",
+    "koa-compose": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2",
+    "sinon": "^1.16.1",
+    "sinon-chai": "^2.8.0",
+    "standard": "^5.3.0"
+  },
+  "standard": {
+    "ignore": [
+      "lib/*.js"
+    ]
+  }
+}
